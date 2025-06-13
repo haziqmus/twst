@@ -1,21 +1,18 @@
 const express = require('express');
 const axios = require('axios');
-const dotenv = require('dotenv');
-
-dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// GitHub Configuration (Simplified for public repo)
-const githubRepoOwner = process.env.GITHUB_REPO_OWNER;
-const githubRepoName = process.env.GITHUB_REPO_NAME;
-const githubJsonFilePath = process.env.GITHUB_JSON_FILE_PATH;
+// GitHub Configuration (Hardcoded - FOR DEMO ONLY.  NEVER DO THIS IN PRODUCTION!)
+const githubRepoOwner = 'Zie619';
+const githubRepoName = 'n8n-workflows';
+const githubJsonFilePath = 'nodes'; //The json file path, to find files on this folder
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-// Function to fetch a file from GitHub (Simplified for public repo)
+// Function to fetch a file from GitHub
 async function fetchFileContent(filePath) {
     try {
         const response = await axios.get(`https://api.github.com/repos/${githubRepoOwner}/${githubRepoName}/contents/${githubJsonFilePath}/${filePath}`, {
@@ -30,7 +27,7 @@ async function fetchFileContent(filePath) {
     }
 }
 
-// Function to list files in a GitHub directory (Simplified for public repo)
+// Function to list files in a GitHub directory
 async function listFiles(directoryPath) {
     try {
         const response = await axios.get(`https://api.github.com/repos/${githubRepoOwner}/${githubRepoName}/contents/${directoryPath}`);
