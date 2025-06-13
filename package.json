@@ -2,23 +2,23 @@
   "name": "test",
   "version": "1.0.0",
   "description": "Node.js Express app to search JSON files in a GitHub repository",
-  "main": "app.js",  // Or index.js, depending on your main file
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"  // Or node index.js
+    "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.17.1", // Or your installed version
-    "axios": "^0.21.1",  
+    "express": "^4.17.1",
+    "axios": "^0.21.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"  // Optional, for local development
+    "nodemon": "^2.0.12"
   },
   "engines": {
-    "node": "18.x" // Or your preferred Node.js version
+    "node": "18.x"
   },
   "repository": {
     "type": "git",
-    "url": "YOUR_GIT_REPO_URL"  // Replace with your actual Git repository URL
+    "url": "YOUR_GIT_REPO_URL"
   },
   "keywords": [
     "nodejs",
@@ -27,6 +27,6 @@
     "json",
     "search"
   ],
-  "author": "Your Name",  // Replace with your name
+  "author": "Your Name",
   "license": "MIT"
 }
